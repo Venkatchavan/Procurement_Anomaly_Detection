@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw procurement data from open data sources
+    tables:
+      - name: procurement_contracts
+        description: Raw contract award data
+        columns:
+          - name: contract_id
+            description: Unique contract identifier
+            tests:
+              - unique
+              - not_null

@@ -1,0 +1,11 @@
+procurement_transparency:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../data/procurement.duckdb'
+      threads: 4
+    prod:
+      type: duckdb
+      path: '../data/procurement_prod.duckdb'
+      threads: 8
