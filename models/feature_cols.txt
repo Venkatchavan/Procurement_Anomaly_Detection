@@ -1,0 +1,9 @@
+log_contract_value
+price_deviation_from_category
+vendor_contract_count
+vendor_authority_count
+days_to_award
+award_month
+award_quarter
+authority_vendor_count
+authority_contract_count

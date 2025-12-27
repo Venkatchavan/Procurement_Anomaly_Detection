@@ -215,7 +215,7 @@ def main():
         # Time series chart
         st.subheader("📉 Contract Value Trends")
         
-        monthly_data = filtered_df.set_index('award_date').resample('M').agg({
+        monthly_data = filtered_df.set_index('award_date').resample('ME').agg({
             'contract_value': 'sum',
             'contract_id': 'count'
         }).reset_index()
@@ -238,7 +238,7 @@ def main():
             height=400
         )
         
-        st.plotly_chart(fig_trends, use_container_width=True)
+        st.plotly_chart(fig_trends, width='stretch')
     
     with col_right:
         # Risk distribution pie chart
@@ -262,7 +262,7 @@ def main():
         )])
         
         fig_risk.update_layout(height=400)
-        st.plotly_chart(fig_risk, use_container_width=True)
+        st.plotly_chart(fig_risk, width='stretch')
     
     # Vendor analysis
     st.markdown("---")
@@ -288,7 +288,7 @@ def main():
             color_continuous_scale='Blues'
         )
         fig_vendors.update_layout(height=400)
-        st.plotly_chart(fig_vendors, use_container_width=True)
+        st.plotly_chart(fig_vendors, width='stretch')
     
     with col2:
         st.subheader("Category Distribution")
@@ -304,7 +304,7 @@ def main():
             color_continuous_scale='Viridis'
         )
         fig_categories.update_layout(height=400)
-        st.plotly_chart(fig_categories, use_container_width=True)
+        st.plotly_chart(fig_categories, width='stretch')
     
     # High-risk contracts table
     st.markdown("---")
@@ -324,7 +324,7 @@ def main():
         
         st.dataframe(
             display_df.head(20),
-            use_container_width=True,
+            width='stretch',
             height=400
         )
         
@@ -357,7 +357,7 @@ def main():
     
     fig_scatter.update_xaxes(type="log")
     fig_scatter.update_layout(height=500)
-    st.plotly_chart(fig_scatter, use_container_width=True)
+    st.plotly_chart(fig_scatter, width='stretch')
     
     # Footer
     st.markdown("---")
