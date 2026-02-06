@@ -242,10 +242,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Open source community for tools and libraries
 
 ## 📧 Contact
-
-- **Project Maintainer**: [Your Name]
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your Profile]
 - **Issues**: [GitHub Issues](https://github.com/Venkatchavan/Procurement_Anomaly_Detection/issues)
 
 ## 🗺️ Roadmap
